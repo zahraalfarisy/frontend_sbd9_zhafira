@@ -293,7 +293,7 @@ const Modal = ({ isOpen, onClose, title, children }) => {
 const TaskService = {
   getAllTasks: async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/tasks");
+      const response = await axios.get("https://backend-sbd9-zhafira.vercel.app/api/tasks");
       return response.data.data;
     } catch (error) {
       console.error("Error fetching tasks:", error);
@@ -303,7 +303,7 @@ const TaskService = {
   
   getTaskById: async (id) => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/tasks/${id}`);
+      const response = await axios.get(`https://backend-sbd9-zhafira.vercel.app/api/tasks/${id}`);
       return response.data.data;
     } catch (error) {
       console.error(`Error fetching task ${id}:`, error);
@@ -313,7 +313,7 @@ const TaskService = {
   
   createTask: async (taskData) => {
     try {
-      const response = await axios.post("http://localhost:3000/api/tasks", taskData);
+      const response = await axios.post("https://backend-sbd9-zhafira.vercel.app/api/tasks", taskData);
       return response.data.data;
     } catch (error) {
       console.error("Error creating task:", error);
@@ -323,7 +323,7 @@ const TaskService = {
   
   updateTask: async (id, taskData) => {
     try {
-      const response = await axios.put(`http://localhost:3000/api/tasks/${id}`, taskData);
+      const response = await axios.put(`https://backend-sbd9-zhafira.vercel.app/api/tasks/${id}`, taskData);
       return response.data.data;
     } catch (error) {
       console.error(`Error updating task ${id}:`, error);
@@ -333,7 +333,7 @@ const TaskService = {
   
   toggleTaskCompletion: async (id) => {
     try {
-      const response = await axios.patch(`http://localhost:3000/api/tasks/${id}/toggle`);
+      const response = await axios.patch(`https://backend-sbd9-zhafira.vercel.app/api/tasks/${id}/toggle`);
       return response.data.data;
     } catch (error) {
       console.error(`Error toggling task ${id}:`, error);
@@ -343,7 +343,7 @@ const TaskService = {
   
   deleteTask: async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/tasks/${id}`);
+      const response = await axios.delete(`https://backend-sbd9-zhafira.vercel.app/api/tasks/${id}`);
       return response.data;
     } catch (error) {
       console.error(`Error deleting task ${id}:`, error);
@@ -353,7 +353,7 @@ const TaskService = {
   
   getTaskStats: async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/tasks/stats/summary");
+      const response = await axios.get("https://backend-sbd9-zhafira.vercel.app/api/tasks/stats/summary");
       return response.data.data;
     } catch (error) {
       console.error("Error fetching task stats:", error);
@@ -365,7 +365,7 @@ const TaskService = {
 const CategoryService = {
   getAllCategories: async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/categories");
+      const response = await axios.get("https://backend-sbd9-zhafira.vercel.app/api/categories");
       return response.data.data;
     } catch (error) {
       console.error("Error fetching categories:", error);
@@ -375,7 +375,7 @@ const CategoryService = {
   
   getCategoryById: async (id) => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/categories/${id}`);
+      const response = await axios.get(`https://backend-sbd9-zhafira.vercel.app/api/categories/${id}`);
       return response.data.data;
     } catch (error) {
       console.error(`Error fetching category ${id}:`, error);
@@ -385,7 +385,7 @@ const CategoryService = {
   
   createCategory: async (categoryData) => {
     try {
-      const response = await axios.post("http://localhost:3000/api/categories", categoryData);
+      const response = await axios.post("https://backend-sbd9-zhafira.vercel.app/api/categories", categoryData);
       return response.data.data;
     } catch (error) {
       console.error("Error creating category:", error);
@@ -395,7 +395,7 @@ const CategoryService = {
   
   updateCategory: async (id, categoryData) => {
     try {
-      const response = await axios.put(`http://localhost:3000/api/categories/${id}`, categoryData);
+      const response = await axios.put(`https://backend-sbd9-zhafira.vercel.app/api/categories/${id}`, categoryData);
       return response.data.data;
     } catch (error) {
       console.error(`Error updating category ${id}:`, error);
@@ -405,7 +405,7 @@ const CategoryService = {
   
   deleteCategory: async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/categories/${id}`);
+      const response = await axios.delete(`https://backend-sbd9-zhafira.vercel.app/api/categories/${id}`);
       return response.data;
     } catch (error) {
       console.error(`Error deleting category ${id}:`, error);
@@ -417,7 +417,7 @@ const CategoryService = {
 const HealthService = {
   checkHealth: async () => {
     try {
-      const response = await axios.get("http://localhost:3000/health");
+      const response = await axios.get("https://backend-sbd9-zhafira.vercel.app/health");
       return response.data;
     } catch (error) {
       console.error("Error checking API health:", error);
